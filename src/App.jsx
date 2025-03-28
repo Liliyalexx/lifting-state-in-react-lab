@@ -36,16 +36,18 @@ const App = () => {
     setStack(newStack);
   }
   return (
-    <main>
+    <main className="burger-app">
       <h1>Burger Stacker</h1>
-      <section>
-      <IngredientList 
-      availableIngredients={availableIngredients}
-      addToBurger={addToBurger} />
-      <BurgerStack 
-      stack={stack}
-      removeFromBurger={removeFromBurger} />
-      </section>
+      <div className="burger-container">
+        <IngredientList 
+          availableIngredients={availableIngredients} 
+          addToBurger={addToBurger} 
+        />
+        <BurgerStack 
+          stack={stack} 
+          removeFromBurger={removeFromBurger} 
+        />
+      </div>
     </main>
   );
 };

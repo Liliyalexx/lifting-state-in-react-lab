@@ -2,18 +2,23 @@
 
 const IngredientList = ({ availableIngredients, addToBurger }) => {
     return (
-     
-        <ul>
+        <div className="ingredient-list">
+             <h2>Available Ingredients</h2>
+        <ul className="ingredients">
           {availableIngredients.map((ingredient, index) => (
-            <li key={index} style={{ backgroundColor: ingredient.color }}>
-              {ingredient.name}
+            <li key={index} 
+            className="ingredient-item"
+            style={{ backgroundColor: ingredient.color }}>
+              <span>{ingredient.name}</span>
               <button 
+                className="add-btn"
                 onClick={() => addToBurger(ingredient)}>
                 +
               </button>
             </li>
           ))}
         </ul>
+        </div>
     );
   };
   
